@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 5%; background: rgba(255,255,255,0.97); position: fixed; width: 100%; top: 0; z-index: 1000; }
+.logo-section { display: flex; align-items: center; gap: 12px; color: #667eea; font-weight: 700; }
+.logo-section img { width: 42px; height: 42px; object-fit: contain; }
+.menu a { text-decoration: none; color: #333; padding: 6px 12px; border-radius: 8px; margin: 0 4px; }
+.menu a.active, .menu a:hover { background: #eef2ff; color: #4f46e5; }
+.course-hero { padding: 120px 20px 40px; text-align: center; }
+.course-hero h1 { font-size: 42px; margin-bottom: 10px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; padding-bottom: 40px; }
+.course-card { background: #fff; color: #1e293b; border-radius: 16px; padding: 26px; text-align: center; cursor: pointer; transition: .25s; }
+.course-card:hover { transform: translateY(-5px); }
+.course-card i { font-size: 42px; margin-bottom: 12px; }
+.course-card p { color: #64748b; margin-top: 6px; }
+.video-player-section { display: none; padding-bottom: 40px; }
+.section-back { border: 0; border-radius: 999px; padding: 10px 16px; margin-bottom: 14px; }
+.video-layout { display: grid; grid-template-columns: 3fr 1fr; gap: 16px; }
+.video-container iframe { width: 100%; min-height: 420px; border: 0; border-radius: 14px; }
+.video-list-container { background: #fff; color: #0f172a; border-radius: 14px; padding: 14px; max-height: 420px; overflow-y: auto; }
+.video-item { background: #f1f5f9; border-radius: 10px; padding: 10px; margin-bottom: 8px; cursor: pointer; }
+.video-item.active { background: #dbeafe; color: #1d4ed8; font-weight: 600; }
+@media (max-width: 768px) {
+  .video-layout { grid-template-columns: 1fr; }
+  .course-hero h1 { font-size: 30px; }
+}

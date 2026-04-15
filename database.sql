@@ -1,0 +1,39 @@
+CREATE DATABASE IF NOT EXISTS oureducationmentor CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE oureducationmentor;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    email VARCHAR(160) NOT NULL UNIQUE,
+    mobile VARCHAR(15) DEFAULT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin','student') NOT NULL DEFAULT 'student',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student_profiles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL UNIQUE,
+    progress INT NOT NULL DEFAULT 0,
+    videos_watched INT NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS contents (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    content_type ENUM('video','pdf') NOT NULL,
+    course VARCHAR(80) NOT NULL,
+    title VARCHAR(180) NOT NULL,
+    youtube_url VARCHAR(255) DEFAULT NULL,
+    file_path VARCHAR(255) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    email VARCHAR(160) NOT NULL,
+    phone VARCHAR(40) DEFAULT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

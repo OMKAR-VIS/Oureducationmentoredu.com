@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Our Education Mentor</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo-section">
+        <img src="image/OUR_EDUCATION_MENTOR'S_png.png" alt="Logo">
+        <span>OUR EDUCATION MENTOR</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="course.html" class="active">Course</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+        <a href="register.html">Join Free</a>
+    </div>
+</nav>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+    <div>
+        <h1>Choose Your Course</h1>
+        <p>Premium quality education for JAC Board Class 10 students</p>
+    </div>
+</section>
+
+<!-- COURSE SELECTION -->
+<section class="course-selection" id="courseSelection">
+    <div class="container">
+        <div class="course-grid">
+            <div class="course-card english" data-course="english">
+                <i class="fas fa-font"></i> 
+                <h3>English</h3>
+                <p>Complete Syllabus Covered</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+            <div class="course-card math" data-course="math">
+                <i class="fas fa-calculator"></i>
+                <h3>Mathematics</h3>
+                <p>Concept Clarity Guaranteed</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+            <div class="course-card science" data-course="science">
+                <i class="fas fa-flask"></i>
+                <h3>Science</h3>
+                <p>Practical Learning Approach</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+            <div class="course-card social" data-course="social">
+                <i class="fas fa-globe"></i>
+                <h3>Social Science</h3>
+                <p>Easy Hindi Explanation</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+            <div class="course-card hindi" data-course="hindi">
+                <i class="fas fa-book-open text-warning"></i>
+                <h3>Hindi</h3>
+                <p>Easy Hindi Explanation</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+            <div class="course-card computer" data-course="computer">
+                <i class="fas fa-computer"></i>
+                <h3>Computer</h3>
+                <p>Easy Hindi Explanation</p>
+                <button class="course-btn">Start Learning</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO PLAYER SECTION -->
+<section class="video-player-section" id="videoPlayerSection">
+    <div class="container">
+        <button class="section-back" id="backBtn">
+            <i class="fas fa-arrow-left"></i> Back to Courses
+        </button>
+        <div class="video-layout">
+            <div class="video-container">
+                <iframe id="mainVideo" src="" allowfullscreen></iframe>
+            </div>
+            <div class="video-list-container">
+                <h4 id="courseTitle">Course Videos</h4>
+                <div id="videoList"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/course.js"></script>
+</body>
+</html>

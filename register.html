@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Our Education Mentor</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo-section">
+        <img src="image/OUR_EDUCATION_MENTOR'S_png.png" alt="Logo">
+        <span>OUR EDUCATION MENTOR</span>
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="course.html">Course</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html" class="active">Register</a>
+    </div>
+</nav>
+
+<div class="page-wrapper">
+    <div class="register-card">
+        <h2>Create Your Account</h2>
+        <p>Join as student and start learning</p>
+        <div id="alertMsg" class="alert-box"></div>
+        <form id="registerForm">
+            <div class="input-wrap"><i class="fas fa-user"></i><input type="text" name="name" placeholder="Full Name" required></div>
+            <div class="input-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="Email" required></div>
+            <div class="input-wrap"><i class="fas fa-phone"></i><input type="tel" name="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" required></div>
+            <div class="input-wrap"><i class="fas fa-lock"></i><input type="password" id="passField" name="password" minlength="6" placeholder="Password" required></div>
+            <div class="input-wrap"><i class="fas fa-lock"></i><input type="password" id="confirmPass" placeholder="Confirm Password" required></div>
+            <button class="register-btn" id="registerBtn" type="submit">Create Account</button>
+        </form>
+        <div class="login-link"><a href="index.html">I have already an account</a></div>
+    </div>
+</div>
+<script src="js/register.js"></script>
+</body>
+</html>
